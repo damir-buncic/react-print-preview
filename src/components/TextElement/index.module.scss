@@ -1,0 +1,98 @@
+.container {
+  position: relative;
+  .text {
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #f6f6f6;
+    line-height: 1.5;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: -18px;
+    right: 0;
+    border-bottom: none;
+    background: white;
+
+    &::before {
+      content: "";
+    }
+    input {
+      width: 50px;
+    }
+
+    >button {
+      &:first-child {
+        border-top-left-radius: 5px;
+      }
+      &:last-child {
+        border-top-right-radius: 5px;
+      }
+      &.decreaseFont {
+        > span:last-of-type {
+          font-size: 10px;
+        }
+      }
+
+      &.increaseFont {
+        > span:first-of-type {
+          font-size: 10px;
+        }
+      }
+
+      &.remove {
+        width: 25px;
+        height: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          &:before,
+          &:after {
+            background-color: white;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 10px;
+          height: 1px;
+          transform: rotateZ(45deg);
+          position: absolute;
+          background-color: var(--main-color);
+        }
+
+        &:after {
+          content: "";
+          width: 10px;
+          height: 1px;
+          transform: rotateZ(-45deg);
+          position: absolute;
+          background-color: var(--main-color);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .text {
+      border-radius: 5px 0 5px 5px;
+      border: 1px solid var(--main-color);
+    }
+    .menu {
+      display: flex;
+    }
+  }
+}
+
+@media print {
+  .container {
+    .text {
+      border: none;
+      line-height: 1.5;
+    }
+  }
+}

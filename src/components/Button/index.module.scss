@@ -1,0 +1,13 @@
+.button {
+  outline: none;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: white;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    color: white;
+    background-color: var(--main-color);
+  }
+}

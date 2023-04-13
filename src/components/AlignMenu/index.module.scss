@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    &.center {
+      align-items: center;
+    }
+
+    &.right {
+      align-items: flex-end;
+    }
+
+    > span {
+      height: 2px;
+      background-color: var(--main-color);
+
+      &:nth-child(2n) {
+        width: 8px;
+      }
+
+      &:nth-child(2n + 1) {
+        width: 12px;
+      }
+    }
+
+    &:hover,
+    &.active {
+      > span {
+        background-color: white;
+      }
+    }
+  }
+}

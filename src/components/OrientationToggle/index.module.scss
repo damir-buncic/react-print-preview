@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+
+  .button {
+    outline: none;
+    border: 1px solid var(--main-color);
+    background: none;
+    color: var(--main-color);
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: var(--main-color);
+      color: white;
+
+      .icon {
+        border-color: white;
+      }
+    }
+
+    .icon {
+      border: 1px solid var(--main-color);
+      display: block;
+
+      &.portrait {
+        width: 10px;
+        height: 15px;
+      }
+
+      &.landscape {
+        width: 15px;
+        height: 10px;
+      }
+    }
+  }
+}

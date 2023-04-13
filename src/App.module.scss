@@ -1,0 +1,20 @@
+:root {
+  --main-color: #00adfd;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media print {
+  .container {
+    width: auto;
+    display: block;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}

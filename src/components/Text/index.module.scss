@@ -1,0 +1,24 @@
+.add {
+  text-align: center;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: "";
+    height: 1px;
+    width: 200px;
+    background-color: var(--main-color);
+    margin: 0 1cm;
+  }
+}
+
+@media print {
+  .add {
+    display: none;
+  }
+}

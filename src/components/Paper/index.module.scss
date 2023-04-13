@@ -1,0 +1,50 @@
+.container {
+  .paper {
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px 0px black;
+    padding: 10mm;
+    box-sizing: border-box;
+
+    &.portrait {
+      width: 210mm;
+      min-height: 290mm;
+    }
+
+    &.landscape {
+      min-height: 200mm;
+      width: 297mm;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+
+    &.portrait {
+      width: 210mm;
+    }
+
+    &.landscape {
+      width: 297mm;
+    }
+  }
+}
+
+@media print {
+  .container {
+    .paper {
+      box-shadow: none;
+      border: 0;
+      padding: 0;
+      width: auto !important;
+      height: auto !important;
+      min-height: auto !important;
+      min-width: auto !important;
+    }
+
+    .menu {
+      display: none;
+      width: 0 !important;
+    }
+  }
+}

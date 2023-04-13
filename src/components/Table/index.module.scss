@@ -1,0 +1,53 @@
+table.Table {
+  border-collapse: collapse;
+  margin: 0 auto;
+
+  th,
+  td {
+    border: 1px solid black;
+    padding: 5px 10px;
+    text-align: left;
+    position: relative;
+
+    &.left {
+      text-align: left;
+    }
+
+    &.right {
+      text-align: right;
+    }
+
+    &.center {
+      text-align: center;
+    }
+  }
+
+  th:hover button {
+    opacity: 0.2;
+  }
+
+  .MenuButton:hover {
+    opacity: 1 !important;
+  }
+
+  .MenuButton {
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #00adfd;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #00adfd;
+    display: flex;
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    background: white;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    transition: 0.3s opacity;
+  }
+}
